@@ -1,17 +1,18 @@
-To build for a certain platform please change into the according
-directory and issue a make there.
+This is the same thing as Git-Cheetah, except this only has the "Git Branch" context menu in explorer.
 
-For example to build the explorer plugin:
+1. Build the solution or use one of the dll's in these locations:
+	explorer\visualstudio\Win32\Debug\git_shell_ext.dll
+	explorer\visualstudio\x64\Debug\git_shell_ext64.dll
 
-  cd explorer
-  make
-  make install
+2. Copy the dll to your preferred location, eg:
+	C:\Program Files (x86)\Git-Cheetah-GitBranchOnly
 
-The currently supported platforms:
+3. CMD or Powershell to that folder and run one of these, depending on which file you copied:
+	regsvr32.exe .\git_shell_ext64.dll
+	regsvr32.exe .\git_shell_ext.dll
 
-explorer - Windows explorer plugin for context menues
-finder   - Mac OS X filemanager plugin for context menues (until 10.5)
-nautilus - Gnome Filemanager plugin for context menues
+4. "Git Branch" should now be available in your explorer context menu.
 
-For further details, see the Git Cheetah wiki page:
-https://github.com/msysgit/msysgit/wiki/GitCheetah
+For further details, see the original Git Cheetah on github.
+https://github.com/msysgit/Git-Cheetah
+

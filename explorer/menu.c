@@ -273,31 +273,7 @@ const char **menu_get_platform_argv(menu_commands cmd, void *data,
 	*free_argv = NULL;
 	*argv_data = NULL;
 
-	switch(cmd)
-	{
-		case MENU_HISTORY:
-			history_argv[6] = wd;
-
-			argv = xmalloc(sizeof(history_argv));
-			memcpy(argv, history_argv, sizeof(history_argv));
-			*free_argv = free_platform_argv;
-
-			break;
-
-		case MENU_BASH:
-
-			argv = create_bash_argv(wd);
-			*free_argv = free_bash_argv;
-
-			break;
-
-		default:
-			return NULL;
-	}
-
-	*argv_data = argv;
-
-	return argv;
+	return NULL;
 }
 
 STDMETHODIMP invoke_command(void *p,

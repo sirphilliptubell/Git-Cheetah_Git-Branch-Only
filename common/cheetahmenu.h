@@ -20,14 +20,7 @@ void end_submenu(void *parent, void *submenu);
  * This lets a platform override the command called by an item
  */
 typedef enum {
-	MENU_GUI,
-	MENU_INIT,
-	MENU_HISTORY,
-	MENU_BASH,
-	MENU_BLAME,
-	MENU_CITOOL,
-	MENU_ADDALL,
-	MENU_BRANCH,
+	MENU_BRANCH
 } menu_commands;
 
 typedef void (*free_func_t)(void *);
