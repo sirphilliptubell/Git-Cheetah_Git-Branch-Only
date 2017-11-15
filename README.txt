@@ -1,8 +1,8 @@
 This is the same thing as Git-Cheetah, except this only has the "Git Branch" context menu in explorer.
 
 1. Build the solution or use one of the dll's in these locations:
-	explorer\visualstudio\Win32\Debug\git_shell_ext.dll
-	explorer\visualstudio\x64\Debug\git_shell_ext64.dll
+	explorer\visualstudio\Win32\Release\git_shell_ext.dll
+	explorer\visualstudio\x64\Release\git_shell_ext64.dll
 
 2. Copy the dll to your preferred location, eg:
 	C:\Program Files (x86)\Git-Cheetah-GitBranchOnly

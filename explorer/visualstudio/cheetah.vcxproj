@@ -22,7 +22,7 @@
     <ProjectGuid>{B166694B-D54B-0D5B-704C-C47D52109EB0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>cheetah</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -70,6 +70,10 @@
     <Import Project="props\Cheetah.Release.x64.props" />
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ExecutablePath>$(VC_ExecutablePath_x86);$(WindowsSDK_ExecutablePath);$(VS_ExecutablePath);$(MSBuild_ExecutablePath);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);C:\Program Files (x86)\Make for Windows\bin</ExecutablePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt</IncludePath>
+  </PropertyGroup>
   <ItemGroup>
     <ClInclude Include="..\..\common\cache.h" />
     <ClInclude Include="..\..\common\cheetahmenu.h" />
